@@ -1,0 +1,415 @@
+/* ================= BODY ================= */
+
+body{
+font-family: Arial;
+background: linear-gradient(135deg,#667eea,#764ba2);
+text-align:center;
+animation: gradientMove 10s infinite alternate;
+color:white;
+}
+
+@keyframes gradientMove{
+0%{background: linear-gradient(135deg,#43cea2,#185a9d);}
+50%{background: linear-gradient(135deg,#43cea2,#185a9d);}
+100%{background: linear-gradient(135deg,#43cea2,#185a9d);}
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+width:98%;
+margin:auto;
+animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform: translateY(20px);
+}
+to{
+opacity:1;
+transform: translateY(0);
+}
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background: rgba(255,255,255,0.15);
+backdrop-filter: blur(10px);
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+border-radius: 5px;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+display:flex;
+align-items:center;
+gap:8px;
+}
+
+.nav-actions{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.mode{
+background:#4CAF50;
+border:none;
+color:white;
+padding:8px 14px;
+border-radius:8px;
+cursor:pointer;
+font-size:18px;
+transition:0.3s;
+}
+
+.mode:hover{
+transform:scale(1.1);
+background:#45a049;
+}
+
+/* ================= CARDS ================= */
+
+.card{
+display:inline-block;
+padding:20px;
+margin:10px;
+background: rgba(255,255,255,0.2);
+backdrop-filter: blur(10px);
+border-radius:15px;
+width:200px;
+box-shadow:0 8px 32px rgba(0,0,0,0.2);
+/*transition: transform 0.3s ease, box-shadow 0.3s ease;
+*/}
+
+.card:hover{
+transform: translateY(-10px) scale(1.05);
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* ================= HEADINGS ================= */
+.charts{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.chart-box{
+width:420px;
+text-align:center;
+}
+
+.chart-box canvas{
+width:100% !important;
+height:400px !important;
+}
+
+/* ================= CHARTS ================= */
+
+canvas{
+background: rgba(255,255,255,0.2);
+backdrop-filter: blur(10px);
+border-radius:15px;
+padding:20px;
+margin:20px auto;
+display:block;
+max-width:600px;
+box-shadow:0 8px 25px rgba(0,0,0,0.3);
+transition: transform 0.3s ease;
+background-color: #43cea2;
+}
+
+canvas:hover{
+transform: scale(1.03);
+}
+
+/* ================= FORM INPUTS ================= */
+
+input,select{
+padding:12px;
+margin:8px;
+border-radius:8px;
+border:none;
+outline:none;
+background: rgba(255,255,255,0.2);
+backdrop-filter: blur(10px);
+color:rgb(138, 91, 91);
+font-size:15px;
+transition: all 0.3s ease;
+}
+
+input::placeholder{
+color:#ddd;
+}
+
+input:focus, select:focus{
+background: rgba(255,255,255,0.35);
+transform: scale(1.05);
+box-shadow:0 0 10px rgba(255,255,255,0.5);
+}
+
+/* ================= BUTTON ================= */
+
+button{
+padding:12px 20px;
+border:none;
+border-radius:8px;
+background:#4CAF50;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition: all 0.3s ease;
+}
+
+button:hover{
+background:#45a049;
+transform: translateY(-3px) scale(1.05);
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+button:active{
+transform: scale(0.95);
+}
+
+/* ================= FLOATING BUTTON ================= */
+
+.fab{
+position:fixed;
+bottom:30px;
+right:30px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#4CAF50;
+color:white;
+font-size:30px;
+border:none;
+cursor:pointer;
+box-shadow:0 5px 20px rgba(0,0,0,0.3);
+transition:0.3s;
+}
+
+.fab:hover{
+transform:scale(1.1);
+}
+
+/* ================= TABLE ================= */
+
+table{
+width:100%;
+margin-top:20px;
+border-collapse:collapse;
+background: rgba(255,255,255,0.2);
+backdrop-filter: blur(10px);
+border-radius:10px;
+overflow:hidden;
+animation: tableFade 1s ease;
+}
+
+@keyframes tableFade{
+from{
+opacity:0;
+transform: translateY(20px);
+}
+to{
+opacity:1;
+transform: translateY(0);
+}
+}
+
+th{
+background: rgba(0,0,0,0.3);
+padding:12px;
+text-transform:uppercase;
+letter-spacing:1px;
+}
+
+td{
+padding:10px;
+}
+
+tr{
+transition: all 0.3s ease;
+}
+
+tr:hover{
+background: rgba(255,255,255,0.15);
+transform: scale(1.01);
+}
+
+tbody tr:nth-child(even){
+background: rgba(255,255,255,0.05);
+}
+
+td button{
+padding:6px 10px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+transition:0.3s;
+}
+
+td button:first-child{
+background:#3498db;
+}
+
+td button:last-child{
+background:#e74c3c;
+}
+
+td button:hover{
+transform: scale(1.1);
+}
+
+/* ================= DARK MODE ================= */
+
+.dark{
+background:#121212;
+color:white;
+}
+
+.dark table{
+background:#1e1e1e;
+}
+
+.dark input,
+.dark select{
+background:#333;
+color:white;
+}
+
+/* ================= CHART GRID ================= */
+
+.chart-container{
+display:grid;
+grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+gap:30px;
+margin-top:30px;
+}
+
+
+/*================ Footer==================*/
+
+.footer-custom{
+  background:linear-gradient(135deg,#43cea2,#185a9d);
+  padding:5px 0;
+  color:white;
+  animation: fadeIn 2s ease;
+  border-radius: 5px;
+}
+
+.footer-custom a{
+  color:#00ffcc;
+  text-decoration:none;
+}
+
+.footer-custom a:hover{
+  color:#00ffaa;
+}
+
+
+/* Fade animation */
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+/* ================= LOADING ANIMATION ================= */
+
+.loader{
+width:50px;
+height:50px;
+border:6px solid rgba(255,255,255,0.3);
+border-top:6px solid white;
+border-radius:50%;
+animation: spin 1s linear infinite;
+margin:auto;
+}
+
+@keyframes spin{
+0%{transform: rotate(0deg);}
+100%{transform: rotate(360deg);}
+}
+
+/* ================= ANIMATED CARDS ================= */
+
+.card h3{
+font-size:16px;
+margin-bottom:10px;
+}
+
+.card h2{
+font-size:28px;
+font-weight:bold;
+animation: countUp 1s ease;
+}
+
+@keyframes countUp{
+from{
+transform: translateY(20px);
+opacity:0;
+}
+to{
+transform: translateY(0);
+opacity:1;
+}
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:900px){
+
+.container{
+width:95%;
+}
+
+.card{
+width:90%;
+}
+
+.navbar{
+flex-direction:column;
+gap:10px;
+}
+
+canvas{
+max-width:100%;
+}
+
+}
+
+/* ================= SCROLLBAR STYLE ================= */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:rgba(255,255,255,0.1);
+}
+
+::-webkit-scrollbar-thumb{
+background:#4CAF50;
+border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#45a049;
+}
